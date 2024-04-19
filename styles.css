@@ -19,6 +19,16 @@
     margin-left: 5%;
 }
 
+#submitBtn{
+    width: 30%;
+    height: 80%;
+    background-color: #ffffff;
+    border: 2px solid yellow;
+    margin-top: 1%;
+    margin-bottom: 10px;
+    margin-left: 35%;
+}
+
 #footer{
     width: 90%;
     height: 10%;
