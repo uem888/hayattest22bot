@@ -68,3 +68,21 @@
     border: 0.1px solid #e2cefc;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    #header, #exchangeForm, #footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #submitBtn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #send, #recive {
+        width: 100%;
+        margin-left: 0;
+        float: none;
+    }
+}
