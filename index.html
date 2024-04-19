@@ -12,13 +12,14 @@
         </div>
 
         <div id="exchangeForm">
-            <h1>Оставить заявку на обмен:</h1>
+            <h1>оставить заявку на обмен:</h1>
             <div id="send">
                 <select name="currensy" id="currency">
                     <option disabled selected>ОТДАЕТЕ</option>
                     <option value="RUB">RUB</option>
                     <option value="TYR">TYR</option>
                 </select>
+                <input type="number" id="sendAmount" placeholder="Количество">
             </div>
             <div id="recive">
                 <select name="currensy" id="currency">
@@ -27,12 +28,31 @@
                     <option value="BTC">BTC</option>
                     <option value="ETH">ETH</option>
                 </select>
+                <input type="number" id="receiveAmount" placeholder="Количество">
             </div>
-            
+            <button id="submitBtn">Отправить</button>
         </div>
-
+        
+        <script>
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                // Получаем выбранные значения из выпадающих списков
+                var sendCurrency = document.getElementById('send').querySelector('select').value;
+                var receiveCurrency = document.getElementById('recive').querySelector('select').value;
+                
+                // Получаем введенные пользователем суммы
+                var sendAmount = document.getElementById('sendAmount').value;
+                var receiveAmount = document.getElementById('receiveAmount').value;
+                
+                // Формируем сообщение
+                var message = 'Отправляете ' + sendAmount + ' ' + sendCurrency + ' и получаете ' + receiveAmount + ' ' + receiveCurrency;
+                
+                // Выводим сообщение в всплывающем окне
+                alert(message);
+            });
+        </script>
         <div id="footer">
-            <p>Base information about us</p>
+            <p>Справочная информация о сервисе</p>
         </div>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </body>
 </html>
