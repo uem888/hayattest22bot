@@ -49,6 +49,16 @@
                 // Выводим сообщение в всплывающем окне
                 alert(message);
             });
+            document.getElementById('sendAmount').addEventListener('input', function() {
+                // Получаем введенную сумму
+                var sendAmount = this.value;
+                // Генерируем случайный коэффициент от 0.5 до 2.0
+                var randomFactor = Math.random() * (20.0 - 2.0);
+                // Вычисляем получаемую сумму
+                var receiveAmount = sendAmount * randomFactor;
+                // Устанавливаем получаемую сумму в поле "ПОЛУЧАЕТЕ"
+                document.getElementById('receiveAmount').value = receiveAmount;
+            });
         </script>
         <div id="footer">
             <p>Справочная информация о сервисе</p>
